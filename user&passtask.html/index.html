@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="click">click me</button>
+    <script>
+      let btn = document.getElementById("click");
+      btn.addEventListener("click", function () {
+        let name = prompt("enter a name:");
+        let number = prompt("enter a number:");
+        localStorage.setItem("user", name);
+        localStorage.setItem("num", number);
+        window.location.assign("./page2user.html")
+
+      });
+    </script>
+  </body>
+</html>

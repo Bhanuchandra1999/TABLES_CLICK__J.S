@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">user details</button>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <script>
+      let btn = document.querySelector("#btn");
+      let div1 = document.querySelector(".div1");
+      let div2 = document.querySelector(".div2");
+
+      btn.addEventListener("click", function () {
+        let user1 = localStorage.getItem("user");
+        let number1 = localStorage.getItem("num");
+        console.log(user1, number1);
+       
+        div1.append("user name:",user1,);
+        div2.append("password :",number1)
+       
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        
+        }
+      div {
+        display: inline-block;
+        margin: 2px;
+        text-align: center;
+        vertical-align: top;
+        width: 400px;
+        height: 600px;
+        border: none;
+     
+      }
+      div:hover{
+        box-shadow: 1px 4px 5px 5px lightslategray;
+        
+      }
+      button {
+        background-color: black;
+        color: aquamarine;
+        font-size: 20px;
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var data = [
+      {
+          id: 4,
+          title: "Mens Casual Slim Fit",
+          price: 15.99,
+          description:
+            "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+          category: "men's clothing",
+          image: "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg",
+          rating: {
+            rate: 2.1,
+            count: 430,
+          },
+        },
+      
+      ];
+
+        var div1 = document.createElement("div");
+        var img1 = document.createElement("img");
+        img1.src = data[0].image;
+        img1.width = 200;
+        img1.height = 200;
+        div1.append(img1);
+
+        var h3 = document.createElement("h3");
+        h3.innerText = data[0].description;
+        div1.appendChild(h3);
+
+        var p = document.createElement("p");
+        p.innerText = data[0].title;
+        div1.appendChild(p);
+
+        var h4 = document.createElement("h4");
+        h4.innerText = data[0].category;
+        div1.appendChild(h4);
+
+        var h4_1 = document.createElement("h4");
+        h4_1.innerText = data[0].rating.rate;
+        div1.appendChild(h4_1);
+
+        var btn = document.createElement("button");
+        btn.innerText = "Buy This Item";
+        div1.appendChild(btn);
+
+        btn.addEventListener("click",function(){
+          window.location.assign(data[0].image)
+        })
+
+        document.body.append(div1);
+      
+      
+    </script>
+  </body>
+</html>

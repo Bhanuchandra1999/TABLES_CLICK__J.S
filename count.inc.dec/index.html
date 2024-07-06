@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 50%;
+            height:20vh;
+            border: 2px solid black;
+            border-radius: 20px;
+            /* background-color: aquamarine; */
+            display: flex;
+            justify-content: center;
+            align-items:center;
+            margin-top: 200px;
+            margin-left:250px
+            
+            
+        }
+        #btn1, #btn2 {
+           background-color: aqua;
+           color: black;
+           width: 30%;
+           border-radius: 10px;
+           font-size: 20px;
+        }
+        #zero {
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <button id="btn1">-</button>
+        <p id="zero">0</p>
+        <button id="btn2">+</button>
+    </div>
+
+    
+    <script>
+        let button1=document.getElementById("btn1")
+        let button2=document.getElementById("btn2")
+        let value=document.getElementById("zero")
+        let count=0;
+        function color(){
+            if(count>0){
+            value.style.color="green"
+        }   
+        else if(count<0){
+            value.style.color="red"
+        }
+        else{
+            value.style.color="black"
+        }
+        }
+        button1.addEventListener("click",function(){
+            count--
+            value.innerText=count;
+            color()
+        })
+        button2.addEventListener("click",function(){
+            count++;
+            value.innerText=count
+            color()
+        })
+        </script>
+</body>
+</html>
